@@ -48,7 +48,7 @@ server.get("/colour", (req, res) => {
 //Challenge 4 & 5
 const cheeseList = []
 server.get("/cheese", (req, res) => {
-  const chessRating = cheeseList.map(({ name, rating }) =>
+  const cheeseRating = cheeseList.map(({ name, rating }) =>
     `<li>Name: ${name}  //  Rating: ${rating}</li>`);
   res.send(`
   <!doctype html>
@@ -67,7 +67,7 @@ server.get("/cheese", (req, res) => {
               <input type="range" id="rating" name="rating" min="0" max="5"><br><br>
               <button type="submit">Rate Cheese</button>
             </form>
-            <ul>${chessRating.join("")}</ul>
+            <ul>${cheeseRating.join("")}</ul>
       </body>
       </html>
 `);
